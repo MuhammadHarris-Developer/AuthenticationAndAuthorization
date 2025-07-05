@@ -32,7 +32,7 @@ namespace AuthenticationAndAuthorization.Controllers
                 var audience = jwtSection["Audience"];
                 var key = Encoding.UTF8.GetBytes(jwtSection["Key"]); ;
 
-                var claims = new[] { new Claim(ClaimTypes.Name, model.UserName), new Claim("role", "admin") };
+                var claims = new[] { new Claim(ClaimTypes.Name, model.UserName), new Claim(ClaimTypes.Role, "admin") };
                 var jwt = new JwtSecurityToken(
                     issuer: issuer,
                     audience: audience,

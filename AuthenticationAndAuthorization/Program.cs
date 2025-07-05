@@ -23,8 +23,7 @@ builder.Services.AddAuthentication(options => {
         ValidateIssuerSigningKey = true,
         ValidIssuer = issuer,
         ValidAudience = audience,
-        IssuerSigningKey = new SymmetricSecurityKey(key),
-        RoleClaimType = "role"
+        IssuerSigningKey = new SymmetricSecurityKey(key)
     };
 });
 
